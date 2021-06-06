@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
   [SerializeField] float mainThrust = 100f;
-  
+  [SerializeField] float rotationThrust = 100f;
   Rigidbody rb;
 
   
@@ -38,12 +38,17 @@ public class Movement : MonoBehaviour
     {
          if (Input.GetKey(KeyCode.A))
         {
-           transform.Rotate(Vector3.forward);
+           ApplyRotation(rotationThrust);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-           transform.Rotate(-Vector3.forward);
+           ApplyRotation(-rotationThrust);
         }
+    }
+
+     void ApplyRotation(float rotationThisFrame)
+    {
+        transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
     }
 
 }
