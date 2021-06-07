@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    //PARAMETERS - for tuning, typically set in the editor
+
+    // CACHE - e.g. references for readablity or speed
+
+    // STATE - private instance (member) variables
+
+
     [SerializeField] float mainThrust = 100f;
     [SerializeField] float rotationThrust = 100f;
     [SerializeField] AudioClip mainEngine;
+    
     Rigidbody rb;
     AudioSource audioSource;
   
+  bool isAlive;
   
     // Start is called before the first frame update
     void Start()
