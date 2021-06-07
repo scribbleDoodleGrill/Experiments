@@ -4,75 +4,39 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    //PARAMETERS - for tuning, typically set in the editor
-
-    // CACHE - e.g. references for readablity or speed
-
-    // STATE - private instance (member) variables
-
-
-    [SerializeField] float mainThrust = 100f;
-    [SerializeField] float rotationThrust = 100f;
-    [SerializeField] AudioClip mainEngine;
     
-    Rigidbody rb;
-    AudioSource audioSource;
-  
-  bool isAlive;
-  
     // Start is called before the first frame update
     void Start()
     {
-       rb = GetComponent<Rigidbody>();
-       audioSource = GetComponent<AudioSource>();
-
+        
     }
 
     // Update is called once per frame
     void Update()
-
     {
+
         ProcessThrust();
         ProcessRotation();
     }
+
     void ProcessThrust()
     {
         if (Input.GetKey(KeyCode.Space))
         {
-           
-            rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
-            if(!audioSource.isPlaying)
-            {
-            audioSource.PlayOneShot(mainEngine);
-            }
-            
+            Debug.Log("Pressed Space -  Thrusting");
         }
-        else
-        {
-            audioSource.Stop();        
-        }
-    
-       
-
-
+        
     }
-    void ProcessRotation()
+
+     void ProcessRotation()
     {
-         if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
-           ApplyRotation(rotationThrust);
+           Debug.Log("Left");
         }
         else if (Input.GetKey(KeyCode.D))
         {
-           ApplyRotation(-rotationThrust);
+           Debug.Log("Right");
         }
     }
-
-     void ApplyRotation(float rotationThisFrame)
-    {
-        rb.freezeRotation = true;
-        transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
-        rb.freezeRotation = false;
-    }
-
 }
