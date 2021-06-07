@@ -493,6 +493,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1926557637, guid: dbe284369f8fa5f44ab64eb3a6f9fadc, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094065699, guid: dbe284369f8fa5f44ab64eb3a6f9fadc, type: 3}
+      propertyPath: crash
+      value: 
+      objectReference: {fileID: 8300000, guid: ca4440f1e19fccc4aa5bbf866c2dda2f, type: 3}
+    - target: {fileID: 2094065699, guid: dbe284369f8fa5f44ab64eb3a6f9fadc, type: 3}
+      propertyPath: success
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c9fa60a6bd81ec40a0977766dafc028, type: 3}
     - target: {fileID: 863179753190576648, guid: dbe284369f8fa5f44ab64eb3a6f9fadc, type: 3}
       propertyPath: m_RootOrder
       value: 6
