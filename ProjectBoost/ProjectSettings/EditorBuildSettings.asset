@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/In Between.unity
     guid: 7020c160fde4e5b45b97739049337b39
+  - enabled: 1
+    path: Assets/Scenes/Many In Between.unity
+    guid: 9d1b3ba05c2963640a045f779f3c1732
   m_configObjects: {}

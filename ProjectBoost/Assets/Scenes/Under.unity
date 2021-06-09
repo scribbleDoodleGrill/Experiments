@@ -358,7 +358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6395220789725698036, guid: a60b40b8185da934ebca5e175a6b4849, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.229
+      value: 8.08
       objectReference: {fileID: 0}
     - target: {fileID: 6395220789725698036, guid: a60b40b8185da934ebca5e175a6b4849, type: 3}
       propertyPath: m_LocalPosition.z
@@ -606,7 +606,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3204876798121765973, guid: 7b1bc0e90f5eff24b8d88aaafdde9876, type: 3}
+      propertyPath: mainEngine
+      value: 
+      objectReference: {fileID: 8300000, guid: 23db751bc8c714243bbf8a2165462e92, type: 3}
+    m_RemovedComponents:
+    - {fileID: 411761884, guid: 7b1bc0e90f5eff24b8d88aaafdde9876, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b1bc0e90f5eff24b8d88aaafdde9876, type: 3}
 --- !u!1 &3204876799171112022 stripped
 GameObject:
@@ -620,7 +625,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3204876799171112022}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 23db751bc8c714243bbf8a2165462e92, type: 3}
