@@ -323,6 +323,9 @@ MonoBehaviour:
   mainThrust: 100
   rotationThrust: 100
   mainEngine: {fileID: 8300000, guid: 23db751bc8c714243bbf8a2165462e92, type: 3}
+  mainEngineParticles: {fileID: 5120010527702120596}
+  leftThrusterParticles: {fileID: 4673303653284566423}
+  rightThrusterParticles: {fileID: 571109747034662339}
 --- !u!54 &3204876798121743278
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1282,6 +1285,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 771087676723270698, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
   m_PrefabInstance: {fileID: 1148927362449095585}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &571109747034662339 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 584678573886053986, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
+  m_PrefabInstance: {fileID: 1148927362449095585}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2014410017364114595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1478,6 +1486,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4940884351362868, guid: a3553fd250eb92d4091bebde350c6739, type: 3}
   m_PrefabInstance: {fileID: 5022118312706135528}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &5120010527702120596 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198100719057022332, guid: a3553fd250eb92d4091bebde350c6739, type: 3}
+  m_PrefabInstance: {fileID: 5022118312706135528}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5244401054712155125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1538,5 +1551,10 @@ PrefabInstance:
 --- !u!4 &4788644517278965727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 771087676723270698, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
+  m_PrefabInstance: {fileID: 5244401054712155125}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4673303653284566423 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 584678573886053986, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
   m_PrefabInstance: {fileID: 5244401054712155125}
   m_PrefabAsset: {fileID: 0}
