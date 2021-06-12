@@ -5,14 +5,26 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
+    [Header("General Setup Settings")]
+    [Tooltip("How fast ship moves up and down based upon player input")] 
     [SerializeField] float controlSpeed = 10f;
+    [Tooltip("How fast player moves horizontally")] 
     [SerializeField] float xRange = 10f;
+    [Tooltip("How fast player moves vertically")] 
     [SerializeField] float yRange = 7f;
+
+    [Header("Laser gun array")]
+    [Tooltip("Add all player lasers here")] 
     [SerializeField] GameObject[] lasers;
 
+
+    [Header("Screen position based tuning")]
     [SerializeField] float positionPitchFactor = -2f;
-    [SerializeField] float controlPitchFactor = -10f;
     [SerializeField] float positionYawFactor = 2f;
+
+    
+    [Header("Player input based tuning")]
+    [SerializeField] float controlPitchFactor = -10f;
     [SerializeField] float controlRollFactor = -20f;
     
     float yThrow, xThrow;
@@ -76,7 +88,7 @@ public class PlayerControls : MonoBehaviour
             foreach(GameObject laser in lasers)
             {
                 var emissionModule = laser.GetComponent<ParticleSystem>().emission;
-                emissionModule.enabled = true;
+                emissionModule.enabled = isActive;
             }
     }
 
