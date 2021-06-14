@@ -1,18 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] float loadDelay = 1f;
+    [SerializeField] ParticleSystem crashVFX;
+
+    void OnTriggerEnter(Collider other) 
     {
-        
+       StartCrashSequence();
+       
     }
 
-    // Update is called once per frame
-    void Update()
+    void StartCrashSequence()
     {
-        
+        crashVFX.Play();
+        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
+        GetComponent<PlayerControls>().enabled = false;
+        Invoke("ReloadLevel", loadDelay);
     }
+
+    void ReloadLevel()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
 }
+
+
+
