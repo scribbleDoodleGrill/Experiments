@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
+    [SerializeField] AudioClip crash;
     [SerializeField] float loadDelay = 1f;
     [SerializeField] ParticleSystem crashVFX;
-
-    void OnTriggerEnter(Collider other) 
+ 
+     void OnTriggerEnter(Collider other) 
     {
        StartCrashSequence();
        
