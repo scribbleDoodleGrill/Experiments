@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1297896932023721241}
   - component: {fileID: 1297896932023721246}
+  - component: {fileID: 7702378606522856315}
   m_Layer: 0
   m_Name: Player Rig
   m_TagString: Untagged
@@ -52,6 +53,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7702378606522856315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297896932023721240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499903172aa7fa046aa98c069ca8f704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1297896933398706171
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,6 +244,10 @@ PrefabInstance:
       propertyPath: deathFX
       value: 
       objectReference: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
+    - target: {fileID: 1618383404868869299, guid: 687efcfdea98ad34aae7f2341f3ce833, type: 3}
+      propertyPath: success
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b18a47d00e6fab4c93fc1cbb48028e0, type: 3}
     - target: {fileID: 2336835379458930597, guid: 687efcfdea98ad34aae7f2341f3ce833, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.07

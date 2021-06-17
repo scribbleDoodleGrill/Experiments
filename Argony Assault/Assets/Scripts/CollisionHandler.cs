@@ -5,30 +5,75 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-    [SerializeField] AudioClip crash;
+    //[SerializeField] AudioClip success;
+     //[SerializeField] AudioClip crash;
+    [SerializeField] ParticleSystem jet1;
+    [SerializeField] ParticleSystem jet2;
+    [SerializeField] ParticleSystem jet3;
     [SerializeField] float loadDelay = 1f;
     [SerializeField] ParticleSystem crashVFX;
- 
+    //bool isTransitioning = false;
+     
+
+     void Start() 
+    {
+        
+    }
+
      void OnTriggerEnter(Collider other) 
     {
        StartCrashSequence();
-       
+
     }
+//here to paste down
+
+
+// here  to paste up
 
     void StartCrashSequence()
     {
         crashVFX.Play();
+        jet1.Stop();
+        jet2.Stop();
+        jet3.Stop();
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<BoxCollider>().enabled = false;
         GetComponent<PlayerControls>().enabled = false;
         Invoke("ReloadLevel", loadDelay);
     }
+// here to paste down
+
+ //void StartSuccessSequence()
+   // {
+      
+   //     GetComponent<PlayerControls>().enabled = false;
+     //   Invoke("LoadNextLevel", loadDelay);
+   // }
+
+
+
+    //here to paste up
 
     void ReloadLevel()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
     }
+
+
+//down is pasted
+//void LoadNextLevel()
+    //{
+     //   int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+      //  int nextSceneIndex = currentSceneIndex + 1;
+     //   if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+       // {
+      //      nextSceneIndex = 0;
+       // }
+       // SceneManager.LoadScene(nextSceneIndex);
+    //}
+
+
 
 }
 

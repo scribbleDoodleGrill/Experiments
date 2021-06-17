@@ -16,7 +16,7 @@ public class PlayerControls : MonoBehaviour
     [Header("Laser gun array")]
     [Tooltip("Add all player lasers here")] 
     [SerializeField] GameObject[] lasers;
-
+    [SerializeField] GameObject[] jet;
 
     [Header("Screen position based tuning")]
     [SerializeField] float positionPitchFactor = -2f;
@@ -37,6 +37,7 @@ public class PlayerControls : MonoBehaviour
        ProcessTranslation();
        ProcessRotation();
        ProcessFiring();
+       
    }
    
    void ProcessRotation()
@@ -91,7 +92,7 @@ public class PlayerControls : MonoBehaviour
                 emissionModule.enabled = isActive;
             }
     }
-
+ 
     
 
 
