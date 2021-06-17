@@ -6,22 +6,27 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
     //[SerializeField] AudioClip success;
-     //[SerializeField] AudioClip crash;
+    [SerializeField] AudioClip crash;
     [SerializeField] ParticleSystem jet1;
     [SerializeField] ParticleSystem jet2;
     [SerializeField] ParticleSystem jet3;
     [SerializeField] float loadDelay = 1f;
     [SerializeField] ParticleSystem crashVFX;
-    //bool isTransitioning = false;
+       //bool isTransitioning = false;
      
+    AudioSource audioSource;
+  bool isTransitioning = false;
+    bool collisionDisabled = false;
+
 
      void Start() 
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
      void OnTriggerEnter(Collider other) 
     {
+         if (isTransitioning || collisionDisabled) { return; }
        StartCrashSequence();
 
     }
@@ -32,8 +37,11 @@ public class CollisionHandler : MonoBehaviour
 
     void StartCrashSequence()
     {
+        isTransitioning = true;
+        audioSource.PlayOneShot(crash);
+
         crashVFX.Play();
-        jet1.Stop();
+                jet1.Stop();
         jet2.Stop();
         jet3.Stop();
         GetComponent<MeshRenderer>().enabled = false;
@@ -56,6 +64,7 @@ public class CollisionHandler : MonoBehaviour
 
     void ReloadLevel()
     {
+        
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
     }
